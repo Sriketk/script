@@ -1,2 +1,2 @@
-export * from "./scenes";
-export * from "./scripts";
+export { scenes } from "./scenes";
+export { scripts } from "./scripts";

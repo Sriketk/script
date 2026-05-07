@@ -29,3 +29,6 @@ if [ $FORMAT_EXIT_CODE -ne 0 ]; then
 fi
 
 echo "✨ Files formatted by Ultracite"
+
+# Run check to fail commit on remaining lint errors
+bun run check

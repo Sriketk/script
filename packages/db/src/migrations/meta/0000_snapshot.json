@@ -55,12 +55,8 @@
           "name": "scenes_script_id_scripts_id_fk",
           "tableFrom": "scenes",
           "tableTo": "scripts",
-          "columnsFrom": [
-            "script_id"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["script_id"],
+          "columnsTo": ["id"],
           "onDelete": "cascade",
           "onUpdate": "no action"
         }

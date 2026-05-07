@@ -1,10 +1,10 @@
 import { env } from "@script/env/server";
 import { drizzle } from "drizzle-orm/node-postgres";
 
-import * as schema from "./schema";
+import { scenes, scripts } from "./schema";
 
-export function createDb() {
-  return drizzle(env.DATABASE_URL, { schema });
-}
+const schema = { scenes, scripts };
+
+export const createDb = () => drizzle(env.DATABASE_URL, { schema });
 
 export const db = createDb();
