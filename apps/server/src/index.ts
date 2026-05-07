@@ -9,13 +9,11 @@ app.use(logger());
 app.use(
   "/*",
   cors({
-    origin: env.CORS_ORIGIN,
     allowMethods: ["GET", "POST", "OPTIONS"],
-  }),
+    origin: env.CORS_ORIGIN,
+  })
 );
 
-app.get("/", (c) => {
-  return c.text("OK");
-});
+app.get("/", (c) => c.text("OK"));
 
 export default app;

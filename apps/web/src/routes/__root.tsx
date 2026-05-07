@@ -1,5 +1,9 @@
 import { Toaster } from "@script/ui/components/sonner";
-import { HeadContent, Outlet, createRootRouteWithContext } from "@tanstack/react-router";
+import {
+  HeadContent,
+  Outlet,
+  createRootRouteWithContext,
+} from "@tanstack/react-router";
 import { TanStackRouterDevtools } from "@tanstack/react-router-devtools";
 
 import Header from "@/components/header";
@@ -12,19 +16,19 @@ export interface RouterAppContext {}
 export const Route = createRootRouteWithContext<RouterAppContext>()({
   component: RootComponent,
   head: () => ({
+    links: [
+      {
+        href: "/favicon.ico",
+        rel: "icon",
+      },
+    ],
     meta: [
       {
         title: "script",
       },
       {
-        name: "description",
         content: "script is a web application",
-      },
-    ],
-    links: [
-      {
-        rel: "icon",
-        href: "/favicon.ico",
+        name: "description",
       },
     ],
   }),
