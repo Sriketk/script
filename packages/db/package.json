@@ -13,7 +13,8 @@
     "db:push": "drizzle-kit push",
     "db:generate": "drizzle-kit generate",
     "db:studio": "drizzle-kit studio",
-    "db:migrate": "drizzle-kit migrate"
+    "db:migrate": "drizzle-kit migrate",
+    "zero:schema": "drizzle-zero generate --output ./src/zero-schema.gen.ts --format --enable-legacy-mutators --enable-legacy-queries"
   },
   "dependencies": {
     "@script/env": "workspace:*",
@@ -23,9 +24,11 @@
     "zod": "catalog:"
   },
   "devDependencies": {
+    "@rocicorp/zero": "^1.4.0",
     "@script/config": "workspace:*",
     "@types/pg": "^8.16.0",
     "drizzle-kit": "^0.31.8",
+    "drizzle-zero": "^0.18.0",
     "typescript": "catalog:"
   }
 }

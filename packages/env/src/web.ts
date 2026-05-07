@@ -4,6 +4,7 @@ import { z } from "zod";
 export const env = createEnv({
   client: {
     VITE_SERVER_URL: z.url(),
+    VITE_ZERO_CACHE_URL: z.url(),
   },
   clientPrefix: "VITE_",
   emptyStringAsUndefined: true,

@@ -22,6 +22,7 @@
     "check-types": "turbo check-types",
     "dev:web": "turbo -F web dev",
     "dev:server": "turbo -F server dev",
+    "dev:zero": "turbo -F zero dev",
     "db:push": "turbo -F @script/db db:push",
     "db:studio": "turbo -F @script/db db:studio",
     "db:generate": "turbo -F @script/db db:generate",

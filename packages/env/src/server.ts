@@ -11,5 +11,8 @@ export const env = createEnv({
     NODE_ENV: z
       .enum(["development", "production", "test"])
       .default("development"),
+    ZERO_AUTH_SECRET: z.string().min(1).optional(),
+    ZERO_REPLICA_FILE: z.string().min(1).optional(),
+    ZERO_UPSTREAM_DB: z.string().min(1).optional(),
   },
 });

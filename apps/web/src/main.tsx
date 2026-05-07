@@ -1,3 +1,6 @@
+import { ZeroProvider } from "@rocicorp/zero/react";
+import { schema } from "@script/db/zero-schema.gen";
+import { env } from "@script/env/web";
 import { RouterProvider, createRouter } from "@tanstack/react-router";
 import ReactDOM from "react-dom/client";
 
@@ -26,5 +29,13 @@ if (!rootElement) {
 
 if (!rootElement.innerHTML) {
   const root = ReactDOM.createRoot(rootElement);
-  root.render(<RouterProvider router={router} />);
+  root.render(
+    <ZeroProvider
+      cacheURL={env.VITE_ZERO_CACHE_URL}
+      schema={schema}
+      userID="anon"
+    >
+      <RouterProvider router={router} />
+    </ZeroProvider>
+  );
 }

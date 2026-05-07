@@ -1,0 +1,19 @@
+{
+  "name": "zero",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "ZERO_REPLICA_FILE=/tmp/script-zero-replica.db ZERO_AUTH_SECRET=dev-only-not-for-prod zero-cache-dev",
+    "start": "zero-cache",
+    "build:permissions": "zero-deploy-permissions"
+  },
+  "dependencies": {
+    "@rocicorp/zero": "^1.4.0",
+    "@script/db": "workspace:*",
+    "dotenv": "catalog:"
+  },
+  "devDependencies": {
+    "@types/bun": "catalog:",
+    "typescript": "catalog:"
+  }
+}
